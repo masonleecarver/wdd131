@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information about Los Angeles.">
+    <meta name="author" content="Lennie Lee Carver">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <title>Los Angeles</title>
+  </head>
+  <body>
+    <header>
+      <h1>Los Angeles</h1>
+    </header>
+    <main>
+      <div class="hero">
+        <picture>
+          <source
+            srcset="images/hollywood-sign-large.webp"
+            media="(min-width: 1000px)">
+          <img
+            src="images/hollywood-sign-small.webp"
+            alt="sceneic photo of the hollywood sign">
+        </picture>
+      </div>
+      <section class="info">
+        <h2>Data</h2>
+        <p>Size: 472 square miles</p>
+        <p>Cities: 88</p>
+        <p>
+          The population of the cities within Los Angeles range from small
+          suburbs of 123 people all the way to the massive city of 3.9
+          million.
+        </p>
+        <p>Languges: 224</p>
+        <p>
+          Los Angeles is the most diverse city in America, and identifies itself
+          as the culuteral hub of the Pacific Rim.
+        </p>
+        <p>
+          Geography: Primarily a desert basin, but boasts over 70 miles of
+          coastline.
+        </p>
+      </section>
+      <section class="weather">
+        <h2>Weather</h2>
+        <img class="weather-icon" src="images/weather.svg" alt="weather icon">
+        <p>Tempurature: <span id="temperature">23.3</span>°C</p>
+        <p>Conditions: Mostly Cloudy<span id="conditions"></span></p>
+        <p>Wind: <span id="wind">0</span> mph</p>
+        <p>Wind Chill: <span id="wind-chill"></span></p>
+      </section>
+    </main>
+    <footer>
+      <p>©<span id="currentyear"></span> ☆ Lennie Lee Carver ☆ Utah</p>
+      <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+  </body>
+</html>
