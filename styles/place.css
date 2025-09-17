@@ -30,6 +30,10 @@ header h1 {
   padding-top: 0.25em;
 }
 
+header h1::after {
+  content: " •ᴗ•";
+}
+
 body {
   background-color: var(--lagold);
   justify-content: center;
