@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid pink;
+    border-collapse: collapse;
+    width: 400px;
+}
+
+caption {
+    caption-side: bottom;
+    font-size: smaller;
+    padding: .2rem;
+}
+
+td, th {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid pink;
+    white-space: pre;
+}
+
+thead, .blank {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+thead tr:nth-last-child(1) {
+    background-color: rgb(73, 73, 73);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(177, 140, 180);
+    color: white;
+}
+
