@@ -25,7 +25,7 @@ nav {
   position: absolute;
   top: 7%;
   right: 5%;
-  z-index: 0;
+  z-index: 1;
   border-radius: 20px;
   background-color: pink;
   display: flex;
@@ -71,7 +71,7 @@ li {
   content: "X";
 }
 
-.open a {
+nav.open a {
   display: block;
 }
 
@@ -152,14 +152,14 @@ footer {
     text-align: center;
   }
 
-  .nav {
+  nav {
     position: relative;
     background: none;
     flex-direction: row;
     gap: 1em;
   }
 
-  .nav a {
+  nav a {
     display: inline;
     flex: 1 1 100%;
   }

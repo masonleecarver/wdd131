@@ -1,7 +1,7 @@
 const year = document.querySelector("#currentyear");
 const lastmodified = document.querySelector("#last-modified");
 const menuButton = document.querySelector("#menu");
-const nav = document.querySelector(".nav");
+const nav = document.querySelector("nav");
 
 const today = new Date();
 
