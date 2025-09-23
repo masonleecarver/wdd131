@@ -5,11 +5,10 @@ const nav = document.querySelector("nav");
 
 const today = new Date();
 
-year.textContent = today.getFullYear();
-lastmodified.textContent = new Intl.DateTimeFormat("en-US", {
-  dateStyle: "full",
-  timeStyle: "long",
-}).format(new Date(document.lastModified));
+const modified = new Date(document.lastModified);
+
+lastmodified.textContent =
+  "" + modified.toLocaleDateString() + " @ " + modified.toLocaleTimeString();
 
 menuButton.addEventListener("click", () => {
   nav.classList.toggle("open");
@@ -88,6 +87,60 @@ const photos = [
     dayTaken: "Feb 23, 2023",
     location: "Home",
     imageURL: "images/photo-album/tux.jpg"
+   },
+   {
+    caption: "Sunset at Mikes.",
+    dayTaken: "Aug 13, 2024",
+    location: "Garden City",
+    imageURL: "images/photo-album/sunset_mikes.jpg"
+   },
+   {
+    caption: "Friend's Reception",
+    dayTaken: "Aug 16, 2024",
+    location: "Cokeville",
+    imageURL: "images/photo-album/friends_reception.jpg"
+   },
+   {
+    caption: "HAT!!!",
+    dayTaken: "Sep 7, 2024",
+    location: "Home",
+    imageURL: "images/photo-album/crochet_hat.jpg"
+   },
+   {
+    caption: "Last Day",
+    dayTaken: "Sep 11, 2024",
+    location: "Garden City",
+    imageURL: "images/photo-album/mikes_last_day.jpg"
+   },
+   {
+    caption: "Very Different.",
+    dayTaken: "Sept 14, 2024",
+    location: "Rexburg",
+    imageURL: "images/photo-album/difference.jpg"
+   },
+   {
+    caption: "Date Night",
+    dayTaken: "Sep 27 2024",
+    location: "Rexburg",
+    imageURL: "images/photo-album/date_night.jpg"
+   },
+   {
+    caption: "Red Hair!",
+    dayTaken: "Nov 1, 2024",
+    location: "Home",
+    imageURL: "images/photo-album/red.jpg"
+   },
+   {
+    caption: "Pizza with Trumoo",
+    dayTaken: "Dec 8, 2024",
+    location: "Rexburg",
+    imageURL: "images/photo-album/pizza.jpg"
+   },
+   {
+    caption: "Best Pillows",
+    dayTaken: "Dec 27, 2024",
+    location: "Home",
+    imageURL: "images/photo-album/pillows.jpg"
    }
 ];
 
@@ -110,6 +163,13 @@ const rexLink = document.querySelector("#rexburg");
 rexLink.addEventListener("click", () => {
     let inRex = photos.filter(photo => photo.location.includes("Rexburg"));
     createCards(inRex);
+})
+
+const otherLink = document.querySelector("#other");
+
+otherLink.addEventListener("click", () => {
+    let other = photos.filter(photo => !photo.location.includes("Rexburg") && !photo.location.includes("Home"));
+    createCards(other);
 })
 
 const olderLink = document.querySelector("#older");
@@ -140,7 +200,7 @@ function createCards(list) {
         location.innerHTML = "Location: " + photo.location;
         img.setAttribute("src", photo.imageURL);
         img.setAttribute("loading", "lazy");
-        img.setAttribute("alt", title);
+        img.setAttribute("alt", photo.caption);
 
         card.appendChild(title);
         card.appendChild(dayTaken);
