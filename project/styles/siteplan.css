@@ -1,0 +1,72 @@
+        :root {
+            --my-brown: #7b3e19;
+            --my-orange: #f2c078;
+            --my-green: #8fd694;
+            --my-blue: #48b8d0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: var(--my-orange);
+        }
+        main {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: "Ribeye";
+            color: var(--my-green);
+            background-color: var(--my-brown);
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: var(--my-blue);
+            font-family: "Josefin Sans";
+        }
+
+        h2::after, h2::before {
+            content: " ♡ ";
+            color: var(--my-green);
+        }
+
+        p, li {
+            font-family: "Josefin Sans";
+            color: var(--my-brown);
+        }
+        .card {
+            padding: 20px;
+            background-color: white;
+            max-width: 400px;
+            border: 2px black solid;
+            border-radius: 15px;
+            margin: 20px auto;
+        }
+        .green {background-color: var(--my-green);}
+        .blue {background-color: var(--my-blue);}
+        .orange {background-color: var(--my-orange);}
+        .brown {background-color: var(--my-brown);}
+        .green, .blue, .orange, .brown {
+            color: white;
+            padding: 20px;
+            margin-top: 5px;
+        }
+        .big {
+            font-family: "Ribeye"; 
+            font-size: larger;
+            margin-bottom: 10px;
+        }
+
+        .wireframes img {
+            width: 100%;
+        }
+
+        .wireframes p {
+            padding: 20px;
+        }
