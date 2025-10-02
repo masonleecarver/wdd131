@@ -68,7 +68,8 @@ label {
 
 
 select, input[type="date"], 
-input[type="text"] {
+input[type="text"],
+input[type="textarea"] {
     display: block;
     height: 2rem;
     width: 100%;
@@ -80,7 +81,8 @@ input[type="text"] {
 }
 
 input[type="date"], 
-input[type="text"] {
+input[type="text"],
+input[type="textarea"] {
     padding: 1.5rem;
 }
 
