@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lennie Lee Carver">
+    <meta name="description" content="A form where you can contact me.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ribeye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <title>Contact Me</title>
+</head>
+<body>
+    <header>
+        <h1>Lennie Lee Carver's Things</h1>
+        <button id="menu"></button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="writings.html">Writings</a></li>
+                <li><a href="#">Drawings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="thanks.html" method="get">
+            <fieldset>
+                <legend>Your Message</legend>
+                <label>Reason For Mesasge
+                    <select id="reason" name="select">
+                        <option value="" disabled selected>Select a reason</option>
+                    </select>
+                </label>
+                <label>Name*
+                    <input type="text" id="name" name="name" required>
+                </label>
+                <label>Email*
+                    <input type="email" id="email" name="email" required>
+                </label>
+                <label>Message* 
+                    <textarea id="message" required></textarea>
+                </label>
+                <p>* indicates a required field</p>
+            </fieldset>
+            <fieldset>
+                <legend>My Vanity</legend>
+                <div>
+                    <p>Rate my Stuff :3</p>
+                    <label><input type="radio" name="rating" value="good">Good</label>
+                    <label><input type="radio" name="rating" value="better">Better</label>
+                    <label><input type="radio" name="rating" value="best">Best</label>
+                </div>
+
+                <div>
+                    <p>Whatchu Like About It</p>
+                    <label><input type="checkbox" id="creative" value="yes">Creative</label>
+                    <label><input type="checkbox" id="funny" value="yes">Funny</label>
+                    <label><input type="checkbox" id="original" value="yes">Original</label>
+                    <label><input type="checkbox" id="inspiring" value="yes">Inspiring</label>
+                </div>
+            </fieldset>
+            <button type="submit" id="submit">Send My Message</button>
+        </form>
+    </main>
+
+    <footer>
+      <p>©<span id="currentyear"></span> ☆ Lennie Lee Carver ☆</p>
+      <ul>
+        <li><a href="contact.html" target="_blank">Contact Me</a></li>
+        <li><a href="https://www.youtube.com/@futzilee" target="_blank">YouTube</a></li>
+        <li><a href="https://www.amazon.com/stores/Lennie-S.-Carver/author/B0F8C89K3Q?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=b33912cc-90a1-4a86-b2e5-c8097033a49d" target="_blank">Amazon Author</a></li>
+      </ul>
+    </footer>
+</body>
+</html>
